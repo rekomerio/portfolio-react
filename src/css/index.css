@@ -1,9 +1,9 @@
 :root {
-  --my-color-1:#111111;
-  --my-color-2:#303030;
-  --my-color-3:#7a3089;
-  --my-color-4:#834ac4;
-  --my-color-5:#782acc;
+  --my-color-1:#172a3a;
+  --my-color-2:#004346;
+  --my-color-3:#508991;
+  --my-color-4:#09bc8a;
+  --my-color-5:#75dddd;
 }
 body {
   margin: 0;
@@ -15,15 +15,16 @@ body {
   text-align: center;
 }
 nav {
-  background-color: var(--my-color-3);
   transition: all 0.35s;
   width: 100%;
   position: fixed;
 }  
 .nav-max {
+  background-color: var(--my-color-4);
   padding: 20px 0px;
 }
 .nav-min {
+  background-color: var(--my-color-1);
   padding: 10px 0px;
 }
 nav ul{
