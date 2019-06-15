@@ -72,4 +72,8 @@ a {
 .content {
   background-color: var(--my-color-1);
   min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
 }
