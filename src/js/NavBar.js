@@ -1,11 +1,25 @@
 import React from 'react';
+import { ReactComponent } from '*.svg';
 
-function NavBar() {
+class Nav extends React.Component() {
+    constructor() {
+      this.state = {
+        scrolled: false,
+      }    
+    }
+    test () {
+        this.setState({scrolled: !this.state.scrolled});
+    }
+    render() {
     return (
-        <nav>
-            <h1>Hello</h1>
+        <nav className={this.state.scrolled ? 'nav-min' : 'nav-max'} onClick={() => test()}>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
         </nav>
-    );
+      );
+    }
   }
   
   export default NavBar;

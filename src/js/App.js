@@ -1,18 +1,14 @@
 import React from 'react';
-import Nav from './NavBar';
-import logo from '../logo.svg';
-import '../css/App.css';
+import Nav from './Nav';
+import Header from './Header';
+import Content from './Content';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Nav />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Portfolio of Reko Meriö
-        </p>
-      </header>
+      <Header />
+      <Content />
     </div>
   );
 }
