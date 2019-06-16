@@ -1,9 +1,9 @@
 :root {
   --my-color-1:#172a3a;
-  --my-color-2:#004346;
-  --my-color-3:#508991;
-  --my-color-4:#09bc8a;
-  --my-color-5:#75dddd;
+  --my-color-2:#022f40;
+  --my-color-3:#046e8f;
+  --my-color-4:#0090c1;
+  --my-color-5:#38aecc;
 }
 .darkest {
   background-color:var(--my-color-1);
@@ -35,13 +35,21 @@
 .brighter-font {
   color: var(--my-color-5);
 }
+.green-font {
+  color:#89d71d;
+}
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 nav {
   transition: all 0.35s;
   width: 100%;
@@ -51,12 +59,12 @@ nav {
   justify-content: space-between;
 }  
 .nav-max {
-  background-color: var(--my-color-4);
-  padding: 20px 0px;
+  background-color: var(--my-color-5);
+  padding: 15px 0px;
 }
 .nav-min {
   background-color: var(--my-color-1);
-  padding: 10px 0px;
+  padding: 5px 0px;
 }
 nav ul {
   list-style: none;
@@ -94,7 +102,6 @@ p {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100% 100% cover;
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,20 +113,27 @@ p {
   margin-left: 10vw;
 }
 .background-tint {
-  background-color: rgb(40, 88, 74);
   background-blend-mode: multiply;
+  transition: background-color 0.3s;
+}
+.light-tint {
+  background-color: rgb(60, 89, 128);
+}
+.dark-tint {
+  background-color: rgb(17, 33, 54);
 }
 .content {
   min-height: 60vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  text-align: left;
   color: white;
+  padding: 50px 0px;
+  font-size: calc(8px + 1vmin);
 }
 .grid-container {
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 100px;
   grid-template-columns: auto auto auto;
   background-color: var(--my-color-3);
   padding: 10px;

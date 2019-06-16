@@ -1,33 +1,44 @@
 import React from 'react';
 
-function Main() {
-    let skills = {
+function Main(props) {
+
+    const skills = {
         title: [
             'HTML',
             'CSS',
             'JavaScript',
             'PHP',
+            'MySQL',
             'C#',
-            'C/C++'
+            'C/C++',
+            'Unity 3D',
+            'Git',
+            'Google Cloud',
+            'Firebase',
         ],
         description: [
-            'Markup language',
+            '',
             'Grid, Flexbox',
             'React & Vue',
             'Laravel framework',
-            'C#',
-            'C++'
+            '',
+            '',
+            '',
+            '',
+            'GitLab & GitHub',
+            'Serverless functions',
+            'DB, Authentication',
         ]
     }
     return (
         <React.Fragment>
-            <header className="app-header background-tint">
+            <header className={`app-header background-tint ${props.scrolled ? 'dark-tint' : 'light-tint'}`}>
                 <div>
                     <h1>Reko Meriö</h1>
                     <p>Software Development student</p>
                 </div>
             </header>
-            <div className="content darkest">
+            <div className="content darkest left">
                 <div>
                     <h1 className="brighter-font">About me</h1>
                     <p>My name is <b>Reko Meriö</b> and I'm 21 years old.</p>
@@ -35,21 +46,23 @@ function Main() {
                     <p>I specialize in Software Developement and have 2 years of school behind me.</p>
                 </div>
             </div>
-            <div className="content dark">
+            <div className="content dark center">
                 <div>
-                    <h1 className="darkest-font">Skills</h1>
+                    <h1 className="darkest-font">Skills and tools</h1>
                     <div className="grid-container">
                         {skills.title.map((title, i) =>
                             <div>
-                                <h2 className="brighter-font">{title}</h2>
+                                <h2 className="green-font">{title}</h2>
                                 <p>{skills.description[i] || title}</p>
                             </div>
                         )}
                     </div>
                 </div>
             </div>
+            <div className="content brighter center"></div>
         </React.Fragment>
     );
 }
+
 
 export default Main;
