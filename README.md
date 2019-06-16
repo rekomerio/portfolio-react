@@ -1,3 +1,5 @@
 # Portfolio
 
-To practice React and my web development skills overall, I have taken the task of rebuilding my portfolio from ground.
+To make my portfolio more modern & maintainable, I have decided to rebuild it from scratch with React.
+
+
