@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfilePic from '../images/me.jpeg';
 
 function Main(props) {
 
@@ -39,11 +40,14 @@ function Main(props) {
                 </div>
             </header>
             <div className="content darkest left">
-                <div>
+                <div className="general">
                     <h1 className="brighter-font">About me</h1>
                     <p>My name is <b>Reko Meriö</b> and I'm 21 years old.</p>
                     <p>I'm studying <b>Information and Communications technology</b> at JAMK University of Applied Sciences.</p>
                     <p>I specialize in Software Developement and have 2 years of school behind me.</p>
+                </div>
+                <div className="general">
+                    <img src={ProfilePic} alt="Reko Meriö" />
                 </div>
             </div>
             <div className="content dark center">
@@ -51,7 +55,7 @@ function Main(props) {
                     <h1 className="darkest-font">Skills and tools</h1>
                     <div className="grid-container">
                         {skills.title.map((title, i) =>
-                            <div>
+                            <div key={i}>
                                 <h2 className="green-font">{title}</h2>
                                 <p>{skills.description[i] || title}</p>
                             </div>

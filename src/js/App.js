@@ -12,7 +12,7 @@ class App extends React.Component {
   componentDidMount() {
     const NAV_HEIGHT = 70;
     window.addEventListener('scroll', () => this.setState({
-      scrolled: (window.pageYOffset > NAV_HEIGHT) //return true or false
+      scrolled: (window.pageYOffset > NAV_HEIGHT) //Returns true or false
     }));
   }
   render() {
