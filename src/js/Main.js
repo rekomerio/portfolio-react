@@ -1,36 +1,9 @@
 import React from 'react';
 import ProfilePic from '../images/me.jpeg';
+import { hobbies, skills } from './Personal';
 
 function Main(props) {
 
-    const skills = {
-        title: [
-            'HTML',
-            'CSS',
-            'JavaScript',
-            'PHP',
-            'MySQL',
-            'C#',
-            'C/C++',
-            'Unity 3D',
-            'Git',
-            'Google Cloud',
-            'Firebase',
-        ],
-        description: [
-            '',
-            'Grid, Flexbox',
-            'React & Vue',
-            'Laravel framework',
-            '',
-            '',
-            '',
-            '',
-            'GitLab & GitHub',
-            'Serverless functions',
-            'DB, Authentication',
-        ]
-    }
     return (
         <React.Fragment>
             <header className={`app-header background-tint ${props.scrolled ? 'dark-tint' : 'light-tint'}`}>
@@ -47,23 +20,43 @@ function Main(props) {
                     <p>I specialize in Software Developement and have 2 years of school behind me.</p>
                 </div>
                 <div className="general">
-                    <img src={ProfilePic} alt="Reko Meriö" />
+                    <div className="flex-column">
+                        <img src={ProfilePic} alt="Reko Meriö" />
+                        <span className="quote">"I put this quote here because it looks cool" - Reko M</span>
+                    </div>
                 </div>
             </div>
             <div className="content dark center">
                 <div>
-                    <h1 className="darkest-font">Skills and tools</h1>
+                    <h1 className="darkest-font">My toolpack</h1>
                     <div className="grid-container">
-                        {skills.title.map((title, i) =>
+                        {skills.map((skill, i) =>
                             <div key={i}>
-                                <h2 className="green-font">{title}</h2>
-                                <p>{skills.description[i] || title}</p>
+                                <h2 className="green-font">{skill.title}</h2>
+                                <p>{skill.description || skill.title}</p>
                             </div>
                         )}
                     </div>
                 </div>
             </div>
-            <div className="content brighter center"></div>
+            <div className="content brighter center">
+                <div>
+                    <h1>Hobbies</h1>
+                    <div className="image-grid">
+                        {hobbies.map((hobby, i) =>
+                            <div className="grid-item" key={i}>
+                                <img className="grid-image" src={hobby.url} alt={hobby.alt} />
+                                <div className="overlay">
+                                    <div className="overlay-text">
+                                        <h1 className="dark-font">{hobby.title}</h1>
+                                        <p>{hobby.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
         </React.Fragment>
     );
 }
