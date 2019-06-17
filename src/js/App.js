@@ -10,10 +10,14 @@ class App extends React.Component {
     }
   }
   componentDidMount() {
+    window.addEventListener('scroll', () => this.changeScrollState());
+  }
+  changeScrollState() {
     const NAV_HEIGHT = 70;
-    window.addEventListener('scroll', () => this.setState({
-      scrolled: (window.pageYOffset > NAV_HEIGHT) //Returns true or false
-    }));
+    let scrolled = (window.pageYOffset > NAV_HEIGHT); //True or false
+    if (this.state.scrolled !== scrolled) {
+      this.setState({ scrolled: scrolled }); // Update state and render the page
+    }
   }
   render() {
     return (
