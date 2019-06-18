@@ -1,5 +1,6 @@
-import hexaUrl from '../images/hexa.jpg'
-import saabUrl from '../images/saab.jpg'
+import hexa from '../images/hexa.jpg'
+import saab from '../images/saab.jpg'
+import wr from '../images/wr.jpg'
 
 export const skills = [
     { title: 'HTML', description: '' },
@@ -19,14 +20,23 @@ export const hobbies = [
     {
         title: 'Hexacopter',
         description: 'Multirotor for aerial photography',
-        url: hexaUrl,
+        image: hexa,
         alt: 'Hexacopter'
     },
     {
         title: 'Saab',
         description: '9-5',
-        url: saabUrl,
+        image: saab,
         alt: 'Saab 9-5'
+    },
+];
+
+export const projects = [
+    {
+        title: 'Software project',
+        description: 'School course where we received project from outsider and then coded and tested it',
+        image: wr,
+        alt: ''
     },
 ];
 

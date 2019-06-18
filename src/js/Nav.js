@@ -6,8 +6,8 @@ function Nav(props) {
   return (
     <nav className={props.scrolled ? 'nav-min' : 'nav-max'}>
       <ul>
-        <li><a className="link" href="#">Home</a></li>
-        <li><a className="link" href="#">Projects</a></li>
+        <li><a className="link" href="#top">Home</a></li>
+        <li><a className="link" href="#projects">Projects</a></li>
       </ul>
       <ul>
         <li>
