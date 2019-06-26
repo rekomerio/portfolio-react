@@ -1,9 +1,9 @@
 :root {
-  --my-color-1:#172a3a;
-  --my-color-2:#022f40;
-  --my-color-3:#046e8f;
-  --my-color-4:#0090c1;
-  --my-color-5:#38aecc;
+  --my-color-1:#131515;
+  --my-color-2:#2b2c28;
+  --my-color-3:#339989;
+  --my-color-4:#05668d;
+  --my-color-5:#02c39a;
 }
 .darkest {
   background-color:var(--my-color-1);
