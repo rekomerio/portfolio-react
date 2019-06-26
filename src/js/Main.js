@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import ProfilePic from "../images/me.jpeg";
 import { skills, hobbies } from "./Personal";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import Dialog from "./Dialog";
 
 const useStyles = makeStyles(theme => ({
   roundButton: {
@@ -11,6 +12,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function Main(props) {
+  const [open, setOpen] = useState(false);
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -64,7 +66,10 @@ function Main(props) {
       </div>
       <div id="projects" className="content deep-dark center">
         <div>
-          <h1 className="cyan-font">Hobbies</h1>
+          <h1 onClick={() => setOpen(true)} className="cyan-font">
+            Hobbies
+          </h1>
+          <Dialog close={() => setOpen(false)} open={open} />
           <ImageGrid items={hobbies} />
         </div>
       </div>
