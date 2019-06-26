@@ -1,13 +1,21 @@
-import React from 'react';
+import React from "react";
 import { DiGithubBadge } from "react-icons/di";
 import { TiSocialLinkedin, TiSocialYoutube } from "react-icons/ti";
 
 function Nav(props) {
   return (
-    <nav className={props.scrolled ? 'nav-min' : 'nav-max'}>
+    <nav className={props.scrolled ? "nav-min" : "nav-max"}>
       <ul>
-        <li><a className="link" href="#top">Home</a></li>
-        <li><a className="link" href="#projects">Projects</a></li>
+        <li>
+          <a className="link" href="#top">
+            Home
+          </a>
+        </li>
+        <li>
+          <a className="link" href="#projects">
+            Projects
+          </a>
+        </li>
       </ul>
       <ul>
         <li>

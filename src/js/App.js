@@ -1,20 +1,20 @@
-import React from 'react';
-import Nav from './Nav';
-import Main from './Main';
+import React from "react";
+import Nav from "./Nav";
+import Main from "./Main";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      scrolled: false,
-    }
+      scrolled: false
+    };
   }
   componentDidMount() {
-    window.addEventListener('scroll', () => this.changeScrollState());
+    window.addEventListener("scroll", () => this.changeScrollState());
   }
   changeScrollState() {
     const NAV_HEIGHT = 70;
-    let scrolled = (window.pageYOffset > NAV_HEIGHT); //True or false
+    let scrolled = window.pageYOffset > NAV_HEIGHT; //True or false
     if (this.state.scrolled !== scrolled) {
       this.setState({ scrolled: scrolled }); // Update state and render the page
     }
