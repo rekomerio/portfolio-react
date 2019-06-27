@@ -117,7 +117,7 @@ nav .badge {
   color: white;
 }
 nav a:hover {
-  border-bottom: 2px solid var(--cyan);
+  border-bottom: 2px solid var(--light-purple);
 }
 .active {
   border-bottom: 2px solid var(--deep-cyan);
@@ -150,7 +150,7 @@ p {
   transition: all 0.3s;
 }
 .light-tint {
-  background-color: rgb(129, 112, 177);
+  background-color: rgb(112, 132, 177);
 }
 .dark-tint {
   background-color: rgb(17, 25, 54);
@@ -194,6 +194,9 @@ p {
   grid-template-columns: auto auto auto;
   padding: 10px;
 }
+.grid-item {
+  max-width: 15rem;
+}
 .image-grid {
   display: grid;
   grid-gap: 5px;
@@ -214,32 +217,36 @@ p {
   object-fit: cover;
   transition: all 0.5s;
 }
-.grid-item {
+.grid-image-container {
   position: relative;
 }
-.grid-item:hover .overlay {
-  bottom: 0;
-  height: 100%;
+.grid-image-container:hover .overlay {
+  opacity: 0.9;
+}
+.grid-image-container:hover .overlay-text {
+  top: 50%;
 }
 .overlay {
   position: absolute;
-  bottom: 100%;
+  bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
   width: 100%;
-  height: 0;
+  height: 100%;
+  opacity: 0;
   transition: 0.5s ease;
 }
 .overlay-text {
   color: white;
   position: absolute;
-  top: 50%;
+  top: -50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  transition: 0.5s ease;
 }
 @media screen and (max-width: 600px) {
   nav .badge {

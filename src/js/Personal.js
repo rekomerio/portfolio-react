@@ -3,17 +3,18 @@ import saab from "../images/saab.jpg";
 import wr from "../images/wr.jpg";
 
 export const skills = [
-  { title: "HTML", description: "" },
-  { title: "CSS", description: "Grid, Flexbox" },
-  { title: "JavaScript", description: "React & Vue" },
+  { title: "HTML5", description: "" },
+  { title: "CSS3", description: "Grid, Flexbox" },
+  { title: "JavaScript", description: "React, Vue" },
   { title: "PHP", description: "Laravel framework" },
   { title: "MySQL", description: "" },
-  { title: "C#", description: "" },
-  { title: "C/C++", description: "" },
-  { title: "Unity 3D", description: "" },
+  { title: "C#", description: "WPF" },
+  { title: "C/C++", description: "Embedded software" },
+  { title: "Unity 3D", description: "Game development" },
   { title: "Git", description: "GitLab & GitHub" },
-  { title: "Google Cloud", description: "Serverless functions" },
-  { title: "Firebase", description: "DB, Authentication" }
+  { title: "Google Cloud", description: "Serverless functions, hosting" },
+  { title: "Firebase", description: "Database, cloud messaging, authentication" },
+  { title: "Docker", description: "Basics" }
 ];
 
 export const hobbies = [
@@ -24,8 +25,8 @@ export const hobbies = [
     alt: "Hexacopter"
   },
   {
-    title: "Saab",
-    description: "9-5",
+    title: "Saab 9-5",
+    description: "2.3t - MY2000",
     image: saab,
     alt: "Saab 9-5"
   }
