@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.8eaa5715.chunk.css",
-    "main.js": "/portfolio-react/static/js/main.da2fc12f.chunk.js",
-    "main.js.map": "/portfolio-react/static/js/main.da2fc12f.chunk.js.map",
+    "main.css": "/portfolio-react/static/css/main.b0fb9f1e.chunk.css",
+    "main.js": "/portfolio-react/static/js/main.9bf628a9.chunk.js",
+    "main.js.map": "/portfolio-react/static/js/main.9bf628a9.chunk.js.map",
     "runtime~main.js": "/portfolio-react/static/js/runtime~main.72b3206a.js",
     "runtime~main.js.map": "/portfolio-react/static/js/runtime~main.72b3206a.js.map",
-    "static/js/2.46faf1c1.chunk.js": "/portfolio-react/static/js/2.46faf1c1.chunk.js",
-    "static/js/2.46faf1c1.chunk.js.map": "/portfolio-react/static/js/2.46faf1c1.chunk.js.map",
+    "static/js/2.d5bce886.chunk.js": "/portfolio-react/static/js/2.d5bce886.chunk.js",
+    "static/js/2.d5bce886.chunk.js.map": "/portfolio-react/static/js/2.d5bce886.chunk.js.map",
     "index.html": "/portfolio-react/index.html",
-    "precache-manifest.613be504fabc92fee5bc3cc349a73e12.js": "/portfolio-react/precache-manifest.613be504fabc92fee5bc3cc349a73e12.js",
+    "precache-manifest.07e10de2dc444594c57262c42b47fee3.js": "/portfolio-react/precache-manifest.07e10de2dc444594c57262c42b47fee3.js",
     "service-worker.js": "/portfolio-react/service-worker.js",
-    "static/css/main.8eaa5715.chunk.css.map": "/portfolio-react/static/css/main.8eaa5715.chunk.css.map",
+    "static/css/main.b0fb9f1e.chunk.css.map": "/portfolio-react/static/css/main.b0fb9f1e.chunk.css.map",
+    "static/media/github-repos.png": "/portfolio-react/static/media/github-repos.f30a8b15.png",
     "static/media/index.css": "/portfolio-react/static/media/header-background.100fee22.jpg",
     "static/media/hexa.jpg": "/portfolio-react/static/media/hexa.bd443bd3.jpg",
     "static/media/me.jpeg": "/portfolio-react/static/media/me.9f66fe0a.jpeg",
     "static/media/saab.jpg": "/portfolio-react/static/media/saab.5fa81d9d.jpg",
-    "static/media/wr.jpg": "/portfolio-react/static/media/wr.8ae0faf8.jpg"
+    "static/media/unity-game.jpg": "/portfolio-react/static/media/unity-game.a9b927a2.jpg",
+    "static/media/vu-meter.jpg": "/portfolio-react/static/media/vu-meter.47a62e43.jpg",
+    "static/media/wr.png": "/portfolio-react/static/media/wr.590c9c80.png"
   }
 }
