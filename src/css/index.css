@@ -72,11 +72,24 @@
 .center {
     text-align: center;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+h3 {
+    font-size: 1.8em;
+}
+h4 {
+    font-size: 1.6em;
 }
 nav {
     transition: all 0.35s;
@@ -129,9 +142,16 @@ p {
     margin: 5px 0px;
     padding: 0;
 }
+.divider {
+    padding: 38px;
+}
+.app {
+    background-color: var(--deep-dark);
+    min-height: 100vh;
+}
 .app-header {
     min-height: 60vh;
-    background-image: url("../images/header-background.jpg");
+    background-image: url("/images/header-background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -167,14 +187,14 @@ p {
 .general {
     margin: 20px;
 }
-.general img {
+.round {
     width: calc(50px + 20vmin);
     height: calc(50px + 20vmin);
     border-radius: 50%;
     object-fit: cover;
     transition: all 0.3s;
 }
-.general img:hover {
+.round:hover {
     width: calc(150px + 20vmin);
     height: calc(150px + 20vmin);
 }
@@ -247,6 +267,33 @@ p {
     transform: translate(-50%, -50%);
     text-align: center;
     transition: 0.5s ease;
+}
+.project img {
+    width: 60vmin;
+    min-width: 300px;
+}
+.project ul {
+    list-style: none;
+    margin: 0px 20px;
+    padding: 0;
+}
+.project ul li {
+    margin: 0;
+    padding: 0;
+}
+.links {
+    min-width: 300px;
+    min-height: 400px;
+}
+.links a {
+    color: white;
+}
+.links a:hover {
+    color: var(--cyan);
+}
+.frame {
+    padding: 1em;
+    box-shadow: 0px 5px 9px 2px #0b0b0b;
 }
 @media screen and (max-width: 600px) {
     nav .badge {

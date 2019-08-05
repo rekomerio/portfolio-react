@@ -1,6 +1,8 @@
 import React from "react";
 import Nav from "./Nav";
 import Main from "./Main";
+import Project from "./Project";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
     constructor() {
@@ -14,17 +16,25 @@ class App extends React.Component {
     }
     changeScrollState() {
         const NAV_HEIGHT = 70;
-        let scrolled = window.pageYOffset > NAV_HEIGHT; //True or false
+        const scrolled = window.pageYOffset > NAV_HEIGHT; //True or false
         if (this.state.scrolled !== scrolled) {
             this.setState({ scrolled: scrolled }); // Update state and render the page
         }
     }
     render() {
         return (
-            <div className="app">
-                <Nav scrolled={this.state.scrolled} />
-                <Main scrolled={this.state.scrolled} />
-            </div>
+            <Router>
+                <div className="app">
+                    <Nav scrolled={this.state.scrolled} />
+                    <div className="divider" />
+                    <Route
+                        render={() => <Main scrolled={this.state.scrolled} />}
+                        exact
+                        path="/"
+                    />
+                    <Route path="/project/:name" component={Project} />
+                </div>
+            </Router>
         );
     }
 }
