@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { projects } from "./Content";
 import Button from "@material-ui/core/Button";
+import Redirect from "./Redirect";
 
 export default function Project() {
     const project = projects.filter(
@@ -8,11 +9,8 @@ export default function Project() {
         element => element.url === window.location.pathname
     )[0];
 
-    const redirect = project && project.redirect; // If project exists, returns redirect, else false
+    const redirect = project && project.redirect; // Check if the project exists
 
-    useEffect(() => {
-        if (redirect) window.location.assign(redirect); // Redirect to another page, if redirect has been defined
-    });
     useEffect(() => {
         setTimeout(() => window.scrollTo(0, 0), 100); // Scroll to top after 100ms
     }, []);
@@ -57,6 +55,8 @@ export default function Project() {
                 </div>
             </div>
         );
+    } else if (redirect) {
+        return <Redirect to={redirect} />;
     } else {
         return (
             <div id="about" className="content deep-dark left">

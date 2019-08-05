@@ -35,9 +35,9 @@ export const projects = [
             "WIMMA Lab is optional school course where you can work for in exchange of ECTS points.",
             "Course started on 14.05.2019 and ended on 31.07.2019.",
             "I worked in virtual company called Iotitude as Lead Developer.",
-            "Our main objective was to create app for virtual queueing.",
+            "Our main objective was to create an app for virtual queueing.",
             "",
-            "We built the project with the most latest technologies such as Firebase, Google Cloud Platform, React, PWA"
+            "We built the project using the most latest technologies such as Firebase, Google Cloud Platform, React, PWA, GitLab CI/CD."
         ],
         image: { src: "/images/jonoxi.jpg", alt: "" },
         url: "/project/wimmalab",

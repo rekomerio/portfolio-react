@@ -119,6 +119,12 @@ nav ul li {
     margin: 0;
     padding: 0;
 }
+.link {
+    color: white;
+}
+.link:hover {
+    color: var(--light-cyan);
+}
 nav .link {
     font-size: calc(1rem + 0.5vmin);
     text-transform: uppercase;
@@ -292,9 +298,16 @@ p {
     color: var(--cyan);
 }
 .frame {
-    padding: 1em;
+    padding: 0.5em;
     box-shadow: 0px 5px 9px 2px #0b0b0b;
 }
+.actions {
+    margin: 2rem 0rem;
+}
+.redirect {
+    max-width: 580px;
+}
+
 @media screen and (max-width: 600px) {
     nav .badge {
         visibility: hidden;

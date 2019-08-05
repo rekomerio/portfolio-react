@@ -23,7 +23,7 @@ class App extends React.Component {
     }
     render() {
         return (
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router>
                 <div className="app">
                     <Nav scrolled={this.state.scrolled} />
                     <div className="divider" />
