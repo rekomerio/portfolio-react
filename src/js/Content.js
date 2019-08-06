@@ -39,7 +39,7 @@ export const projects = [
             "",
             "We built the project using the most latest technologies such as Firebase, Google Cloud Platform, React, PWA, GitLab CI/CD."
         ],
-        image: { src: "/images/jonoxi.jpg", alt: "" },
+        image: { src: "/images/jonoxi.jpg", alt: "jonoxi" },
         url: "/project/wimmalab",
         links: [
             {
@@ -80,7 +80,7 @@ export const projects = [
         title: "Software project",
         description:
             "School course on 2nd year where we went through a complete lifecycle of a software project",
-        image: { src: "/images/wr.png", alt: "" },
+        image: { src: "/images/wr.png", alt: "wear-right team-g" },
         url: "/project/software-project",
         redirect: "https://gitlab.labranet.jamk.fi/team-g-2019"
     },

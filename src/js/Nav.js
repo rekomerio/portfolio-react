@@ -8,14 +8,9 @@ function Nav(props) {
         <nav className={props.scrolled ? "nav-min" : "nav-max"}>
             <ul>
                 <li>
-                    <Link className="link" to="/#top">
+                    <Link className="link" to="/">
                         Home
                     </Link>
-                </li>
-                <li>
-                    <a className="link" href="/#projects">
-                        Projects
-                    </a>
                 </li>
             </ul>
             <ul>

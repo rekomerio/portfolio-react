@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import { projects } from "./Content";
 import Button from "@material-ui/core/Button";
 import Redirect from "./Redirect";
+import NotFound from "./NotFound";
 
 export default function Project() {
     const project = projects.filter(
         // Pick out the project with corresponding url
-        element => element.url === window.location.pathname
+        element => element.url === window.location.hash.split("#")[1]
     )[0];
 
     const redirect = project && project.redirect; // Check if the project exists
@@ -24,11 +25,11 @@ export default function Project() {
                         <p>{project.description}</p>
                     </div>
                     <div className="general">
-                        <div className="frame dark">
+                        <div className="frame shadow dark">
                             <Button>
                                 <img
                                     src={project.image.src}
-                                    alt={project.image.alt || project.description}
+                                    alt={project.image.alt || project.title}
                                 />
                             </Button>
                         </div>
@@ -36,12 +37,13 @@ export default function Project() {
                 </div>
                 <div className="dark content">
                     <div className="general">
-                        {project.longDesc.map((desc, i) =>
-                            desc ? <p key={i}>{desc}</p> : <br key={i} />
+                        {project.longDesc.map((text, i) =>
+                            text ? <p key={i}>{text}</p> : <br key={i} />
                         )}
                     </div>
-                    <div className="links general frame light-dark">
+                    <div className="links general shadow light-dark">
                         <h3 className="cyan-font">Links</h3>
+                        <hr />
                         <ul>
                             {project.links.map(link => (
                                 <li key={link.url}>
@@ -51,6 +53,7 @@ export default function Project() {
                                 </li>
                             ))}
                         </ul>
+                        <hr />
                     </div>
                 </div>
             </div>
@@ -58,12 +61,6 @@ export default function Project() {
     } else if (redirect) {
         return <Redirect to={redirect} />;
     } else {
-        return (
-            <div id="about" className="content deep-dark left">
-                <div className="general">
-                    <h1 className="purple-font">Nothing here</h1>
-                </div>
-            </div>
-        );
+        return <NotFound />;
     }
 }
