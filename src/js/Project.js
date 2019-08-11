@@ -13,7 +13,7 @@ export default function Project() {
     const redirect = project && project.redirect; // Check if the project exists
 
     useEffect(() => {
-        setTimeout(() => window.scrollTo(0, 0), 100); // Scroll to top after 100ms
+        setTimeout(() => window.scrollTo(0, 0), 100); // Scroll to top
     }, []);
 
     if (project && !redirect) {

@@ -80,6 +80,7 @@ body {
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--deep-dark);
 }
 
 h2 {
@@ -134,6 +135,9 @@ nav .link {
 nav .badge {
     margin: 0px 5px;
     color: white;
+}
+nav .badge:hover {
+    border-bottom: 2px solid var(--light-purple);
 }
 nav .link:hover {
     border-bottom: 2px solid var(--light-purple);
@@ -313,6 +317,10 @@ p {
 }
 .redirect {
     max-width: 580px;
+}
+.disclaimer {
+    padding: 3rem 0rem;
+    color: white;
 }
 
 @media screen and (max-width: 600px) {

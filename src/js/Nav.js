@@ -20,18 +20,12 @@ function Nav(props) {
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="https://linkedin.com/in/reko-meriö-882146186/"
-                        className="badge"
-                    >
+                    <a href="https://linkedin.com/in/reko-meriö-882146186/" className="badge">
                         <TiSocialLinkedin size="2.5em" />
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="https://www.youtube.com/user/R3gouify/"
-                        className="badge"
-                    >
+                    <a href="https://www.youtube.com/user/R3gouify/" className="badge">
                         <TiSocialYoutube size="2.5em" />
                     </a>
                 </li>

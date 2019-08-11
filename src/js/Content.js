@@ -1,16 +1,17 @@
 export const skills = [
-    { title: "HTML5", description: "" },
-    { title: "CSS3", description: "Grid, Flexbox" },
-    { title: "JavaScript", description: "React, Vue" },
-    { title: "PHP", description: "Laravel framework" },
-    { title: "MySQL", description: "" },
-    { title: "C#", description: "WPF" },
-    { title: "C/C++", description: "" },
-    { title: "Unity 3D", description: "Game development" },
-    { title: "Git", description: "GitLab & GitHub" },
-    { title: "Google Cloud", description: "Serverless functions, hosting" },
-    { title: "Firebase", description: "Database, cloud messaging, authentication" },
-    { title: "Docker", description: "Basics" }
+    { title: "HTML5", description: "", level: 4 },
+    { title: "CSS3", description: "Grid, Flexbox", level: 4 },
+    { title: "JavaScript", description: "React, Vue", level: 4 },
+    { title: "PHP", description: "Laravel framework", level: 3 },
+    { title: "MySQL", description: "", level: 3 },
+    { title: "Google Cloud", description: "Serverless functions, hosting", level: 3 },
+    { title: "Firebase", description: "Database, cloud messaging, authentication", level: 4 },
+    { title: "Docker", description: "Basics", level: 2 },
+    { title: "Git", description: "GitLab & GitHub", level: 3 },
+    { title: "C#", description: "WPF", level: 2 },
+    { title: "C/C++", description: "", level: 3 },
+    { title: "Unity 3D", description: "Game development", level: 3 },
+    { title: "Embedded software", description: "", level: 3 }
 ];
 
 export const hobbies = [
@@ -47,13 +48,11 @@ export const projects = [
                 desc: "WIMMA Lab"
             },
             {
-                url:
-                    "https://gitlab.labranet.jamk.fi/wimma-lab-2019/iotitude/jonoxi-front",
+                url: "https://gitlab.labranet.jamk.fi/wimma-lab-2019/iotitude/jonoxi-front",
                 desc: "JONOXI front-end code"
             },
             {
-                url:
-                    "https://gitlab.labranet.jamk.fi/wimma-lab-2019/iotitude/jonoxi-back",
+                url: "https://gitlab.labranet.jamk.fi/wimma-lab-2019/iotitude/jonoxi-back",
                 desc: "JONOXI back-end code"
             },
             {

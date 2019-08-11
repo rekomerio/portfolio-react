@@ -19,6 +19,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function Main(props) {
+    function getAge() {
+        const bDay = new Date("1997-09-28T12:00:00");
+        const today = new Date();
+        return Math.floor((today - bDay) / 1000 / 60 / 60 / 24 / 365);
+    }
     const classes = useStyles();
     return (
         <React.Fragment>
@@ -36,15 +41,20 @@ function Main(props) {
                 <div className="general">
                     <h1 className="purple-font">About me</h1>
                     <p>
-                        My name is <b>Reko Meriö</b> and I'm 21 years old.
+                        My name is <b>Reko Meriö</b> and I'm {getAge()} years old.
                     </p>
                     <p>
-                        I'm studying <b>Information and Communications technology</b>{" "}
-                        at JAMK University of Applied Sciences.
+                        I'm studying <b>Information and Communications technology</b> at JAMK
+                        University of Applied Sciences.
                     </p>
                     <p>
-                        I specialize in Software Developement and have 2 years of
-                        school behind me.
+                        I specialize in Software Developement and have 2 years of school behind
+                        me.
+                    </p>
+                    <br />
+                    <p>
+                        In the future, I'm hoping to work with embedded software, but I am also
+                        experienced in web development.
                     </p>
                 </div>
                 <div className="general">
@@ -79,13 +89,28 @@ function Main(props) {
             </div>
             <div id="projects" className="content deep-dark center">
                 <div>
-                    <h2 className="cyan-font">Projects</h2>
+                    <h2 className="cyan-font">Software projects</h2>
                     <ImageGrid
                         overlayColor="dark"
                         fontColor="light-cyan-font"
                         items={projects}
                     />
                 </div>
+            </div>
+            <div className="disclaimer dark center">
+                <p>
+                    For any questions or good advice, please feel free to send me a message
+                    through{" "}
+                    <b>
+                        <a
+                            className="link"
+                            href="https://linkedin.com/in/reko-meri%C3%B6-882146186/"
+                        >
+                            LinkedIn
+                        </a>
+                    </b>{" "}
+                    or email (K9260@student.jamk.fi).
+                </p>
             </div>
         </React.Fragment>
     );
@@ -106,9 +131,7 @@ function ImageGrid(props) {
                                 src={item.image.src}
                                 alt={item.image.alt || item.title}
                             />
-                            <div
-                                className={`overlay ${props.overlayColor || "dark"}`}
-                            >
+                            <div className={`overlay ${props.overlayColor || "dark"}`}>
                                 <div className="overlay-text">
                                     <h2 className={props.fontColor}>{item.title}</h2>
                                     <p>{item.description}</p>
