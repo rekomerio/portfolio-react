@@ -61,11 +61,7 @@ function Main(props) {
                     <div className="flex-column">
                         <div>
                             <Button className={classes.roundButton}>
-                                <img
-                                    src="/images/me.jpeg"
-                                    alt="Reko Meriö"
-                                    className="round"
-                                />
+                                <img src="/images/me.JPG" alt="Reko Meriö" className="round" />
                             </Button>
                         </div>
                         <span className="quote">
