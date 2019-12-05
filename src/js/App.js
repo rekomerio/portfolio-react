@@ -5,38 +5,37 @@ import Project from "./Project";
 import { HashRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            scrolled: false
-        };
+  constructor() {
+    super();
+    this.state = {
+      scrolled: false
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", () => this.changeScrollState());
+  }
+
+  changeScrollState() {
+    const NAV_HEIGHT = 70;
+    const scrolled = window.pageYOffset > NAV_HEIGHT;
+    if (this.state.scrolled !== scrolled) {
+      this.setState({ scrolled: scrolled });
     }
-    componentDidMount() {
-        window.addEventListener("scroll", () => this.changeScrollState());
-    }
-    changeScrollState() {
-        const NAV_HEIGHT = 70;
-        const scrolled = window.pageYOffset > NAV_HEIGHT; //True or false
-        if (this.state.scrolled !== scrolled) {
-            this.setState({ scrolled: scrolled }); // Update state and render the page
-        }
-    }
-    render() {
-        return (
-            <Router>
-                <div className="app">
-                    <Nav scrolled={this.state.scrolled} />
-                    <div className="divider" />
-                    <Route
-                        render={() => <Main scrolled={this.state.scrolled} />}
-                        exact
-                        path="/"
-                    />
-                    <Route path="/project/:name" component={Project} />
-                </div>
-            </Router>
-        );
-    }
+  }
+
+  render() {
+    return (
+      <Router>
+        <div className="app">
+          <Nav scrolled={this.state.scrolled} />
+          <div className="divider" />
+          <Route render={() => <Main scrolled={this.state.scrolled} />} exact path="/" />
+          <Route path="/project/:name" component={Project} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
