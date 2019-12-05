@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import Dialog from "./Dialog";
-import Collapse from "@material-ui/core/Collapse";
+import Collapsable from "./Collapsable";
 
 const useStyles = makeStyles(theme => ({
   roundButton: {
@@ -17,13 +17,22 @@ const useStyles = makeStyles(theme => ({
     margin: 0,
     fontWeight: "inherit",
     textTransform: "none"
+  },
+  expandable: {
+    cursor: "pointer",
+    "&:hover $expandIcon": {
+      opacity: 1
+    }
+  },
+  expandIcon: {
+    opacity: 0,
+    transition: "all 0.2s"
   }
 }));
 
 function Main(props) {
   const classes = useStyles();
   const [dialog, setDialog] = useState({ open: false, tag: "" });
-  const [skillsCollapsed, setSkillsCollapsed] = useState(false);
 
   function getAge() {
     const bDay = new Date("1997-09-28T12:00:00");
@@ -51,7 +60,7 @@ function Main(props) {
             I'm studying <b>Information and Communications technology</b> at JAMK University of
             Applied Sciences.
           </p>
-          <p>I specialize in Software Development and have 2 years of school behind me.</p>
+          <p>I specialize in Software Development and I am on the 3rd year of my studies.</p>
           <br />
           <p>
             In the future, I'm hoping to work with embedded software, but I am also experienced
@@ -71,13 +80,7 @@ function Main(props) {
       </div>
       <div id="tools" className="content dark center">
         <div>
-          <h2
-            className="light-cyan-font clickable"
-            onClick={() => setSkillsCollapsed(!skillsCollapsed)}
-          >
-            Skills and tools
-          </h2>
-          <Collapse timeout={750} in={!skillsCollapsed}>
+          <Collapsable title="Skills and tools" titleClass="light-cyan-font" timeout={750}>
             <div className="grid-container">
               {skills.map((skill, i) => (
                 <div className="grid-item" key={i}>
@@ -91,13 +94,14 @@ function Main(props) {
                 </div>
               ))}
             </div>
-          </Collapse>
+          </Collapsable>
         </div>
       </div>
       <div id="projects" className="content deep-dark center">
         <div>
-          <h2 className="cyan-font">Projects</h2>
-          <ImageGrid overlayColor="dark" fontColor="light-cyan-font" items={projects} />
+          <Collapsable title="Projects" titleClass="cyan-font" timeout={750}>
+            <ImageGrid overlayColor="dark" fontColor="light-cyan-font" items={projects} />
+          </Collapsable>
         </div>
       </div>
       <div className="disclaimer dark center">
@@ -118,6 +122,7 @@ function Main(props) {
         isOpen={dialog.open}
         tag={dialog.tag}
         close={() => setDialog({ ...dialog, open: false })}
+        setTag={setDialog}
       />
     </React.Fragment>
   );

@@ -152,6 +152,11 @@ p {
   margin: 0px 0px;
   padding: 0;
 }
+
+#about {
+  min-height: 55vh;
+}
+
 .divider {
   padding: 38px;
 }
@@ -220,7 +225,7 @@ p {
 }
 .grid-container {
   display: grid;
-  grid-gap: 5rem;
+  grid-gap: 3.5rem 5rem;
   grid-template-columns: auto auto auto;
   padding: 1rem;
 }

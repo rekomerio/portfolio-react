@@ -5,13 +5,15 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import Chip from "@material-ui/core/Chip";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { projects } from "./Content";
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    backgroundColor: "#171717"
+    backgroundColor: "#171717",
+    minWidth: 350
   },
   title: {
     color: "#8561c5"
@@ -28,6 +30,26 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     color: "#8561c5"
+  },
+  projects: {},
+  project: {
+    margin: "1rem 0"
+  },
+  chip: {},
+  chips: {
+    maxWidth: 350,
+    "& > div": {
+      margin: theme.spacing(0.5),
+      backgroundColor: "#008394",
+      color: "#fff",
+
+      "&:hover": {
+        backgroundColor: "#673ab7"
+      },
+      "&:active": {
+        backgroundColor: "#673ab7"
+      }
+    }
   }
 }));
 
@@ -49,19 +71,32 @@ export default function AlertDialog(props) {
           {tag}
         </DialogTitle>
         <DialogContent>
-          {matchingProjects.length ? (
-            matchingProjects.map((project, i) => (
-              <div>
-                <Link className={classes.link} to={project.url}>
-                  {project.title}
-                </Link>
-              </div>
-            ))
-          ) : (
-            <DialogContentText className={classes.contentText}>
-              Content coming soon
-            </DialogContentText>
-          )}
+          <div className={classes.projects}>
+            {matchingProjects.length ? (
+              matchingProjects.map((project, i) => (
+                <div className={classes.project}>
+                  <Link className={classes.link} to={project.url}>
+                    {project.title}
+                  </Link>
+                  <hr />
+                  <div className={classes.chips}>
+                    {project.technologies.map((technology, i) => (
+                      <Chip
+                        onClick={() => props.setTag({ open: true, tag: technology })}
+                        label={technology}
+                        style={{ backgroundColor: technology === tag ? "#482880" : "" }}
+                        key={i}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <DialogContentText className={classes.contentText}>
+                Content coming soon
+              </DialogContentText>
+            )}
+          </div>
         </DialogContent>
         <DialogActions>
           <Button classes={{ root: classes.button }} onClick={close} autoFocus>
