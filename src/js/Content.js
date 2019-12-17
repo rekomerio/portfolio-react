@@ -53,7 +53,7 @@ export const projects = [
       "I worked in virtual company called Iotitude as Lead Developer.",
       "Our main objective was to create an app for virtual queueing.",
       "",
-      "We built the project using the most latest tags such as Firebase, Google Cloud Platform, React, PWA, GitLab CI/CD."
+      "We built the project using the most latest technologies such as Firebase, Google Cloud Platform, React, PWA, GitLab CI/CD."
     ],
     image: "/images/jonoxi.jpg",
     url: "/project/wimmalab",
