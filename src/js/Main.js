@@ -63,8 +63,17 @@ function Main(props) {
           <p>I specialize in Software Development and I am on the 3rd year of my studies.</p>
           <br />
           <p>
-            In the future, I'm hoping to work with embedded software, but I am also experienced
-            in web development.
+            I'm interested in all programming related work, but I would say my skills are
+            mostly based in web development and embedded software.
+          </p>
+          <p>
+            On my freetime I like to study data structures and algorithms to gain a true
+            mindset of a programmer.
+          </p>
+          <br />
+          <p>
+            I'm looking for a trainee position as software developer for summer of 2020, so
+            feel free to send me a message (contact information on bottom of this page)
           </p>
         </div>
         <div className="general">
@@ -99,8 +108,12 @@ function Main(props) {
       </div>
       <div id="projects" className="content deep-dark center">
         <div>
-          <Collapsable title="Projects" titleClass="cyan-font" timeout={750}>
-            <ImageGrid overlayColor="dark" fontColor="light-cyan-font" items={projects} />
+          <Collapsable title="Featured projects" titleClass="cyan-font" timeout={750}>
+            <ImageGrid
+              overlayColor="dark"
+              fontColor="light-cyan-font"
+              items={projects.filter(project => project.featured)}
+            />
           </Collapsable>
         </div>
       </div>

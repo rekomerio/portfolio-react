@@ -5,7 +5,10 @@ export const skills = [
   { title: "PHP", description: "Laravel framework" },
   { title: "MySQL", description: "" },
   { title: "Google Cloud", description: "Serverless functions" },
-  { title: "Firebase", description: "Database, cloud messaging, authentication, hosting" },
+  {
+    title: "Firebase",
+    description: "Database, cloud messaging, authentication, hosting"
+  },
   { title: "Docker", description: "Basics" },
   { title: "Git", description: "GitLab & GitHub" },
   { title: "C#", description: "WPF Basics" },
@@ -37,7 +40,8 @@ export const projects = [
       "https://raw.githubusercontent.com/rekomerio/self-balancing-robot/master/img/self-balancing-robot.jpg",
     url: "/project/self-balancing-robot",
     redirect: "https://github.com/rekomerio/self-balancing-robot",
-    technologies: ["C/C++", "Embedded software", "Electronics"]
+    tags: ["C/C++", "Embedded software", "Electronics"],
+    featured: true
   },
   {
     title: "WIMMA Lab",
@@ -49,7 +53,7 @@ export const projects = [
       "I worked in virtual company called Iotitude as Lead Developer.",
       "Our main objective was to create an app for virtual queueing.",
       "",
-      "We built the project using the most latest technologies such as Firebase, Google Cloud Platform, React, PWA, GitLab CI/CD."
+      "We built the project using the most latest tags such as Firebase, Google Cloud Platform, React, PWA, GitLab CI/CD."
     ],
     image: "/images/jonoxi.jpg",
     url: "/project/wimmalab",
@@ -81,7 +85,8 @@ export const projects = [
         desc: "JAMK article about our team"
       }
     ],
-    technologies: ["JavaScript", "Firebase", "Google Cloud", "HTML5", "CSS3"]
+    tags: ["JavaScript", "React", "Firebase", "Google Cloud", "HTML5", "CSS3", "Git"],
+    featured: true
   },
   {
     title: "QT LED App",
@@ -90,7 +95,8 @@ export const projects = [
 
     url: "/project/qt-led-app",
     redirect: "https://github.com/rekomerio/qt-led-app",
-    technologies: ["QT", "QML", "JavaScript", "Android", "Websocket"]
+    tags: ["QT", "QML", "JavaScript", "Android", "Websocket", "IoT"],
+    featured: true
   },
   {
     title: "Software project",
@@ -99,25 +105,28 @@ export const projects = [
     image: "/images/wr.png",
     url: "/project/software-project",
     redirect: "https://gitlab.labranet.jamk.fi/team-g-2019",
-    technologies: ["PHP", "Laravel", "JavaScript", "Vue", "MySQL", "Docker", "HTML5", "CSS3"]
+    tags: ["PHP", "Laravel", "JavaScript", "Vue", "MySQL", "Docker", "HTML5", "CSS3", "Git"],
+    featured: true
   },
   {
     title: "CD Tray plotter",
-    description: "Small drawing maching built from two old PC CD trays",
+    description: "Small drawing machine built from two old PC CD trays",
     image:
       "https://raw.githubusercontent.com/rekomerio/cd-tray-plotter/master/images/IMG_20190822_183753.jpg",
     url: "/project/cd-tray-plotter",
     redirect: "https://github.com/rekomerio/cd-tray-plotter",
-    technologies: ["Embedded software", "C/C++", "Electronics"]
+    tags: ["Embedded software", "C/C++", "Electronics"],
+    featured: true
   },
   {
     title: "Unity 3D Game",
-    description: "Game I made as final project for game programming course",
+    description: "Game I made as a project for a game programming course",
     image: "/images/unity-game.jpg",
     url: "/project/unity-game",
     redirect:
       "https://gitlab.labranet.jamk.fi/rekon-kurssiharkat/ttos0700/blob/pages/Unity3D/Escape/README.md",
-    technologies: ["C#", "Unity 3D"]
+    tags: ["C#", "Unity 3D"],
+    featured: true
   },
   {
     title: "RGB LED control panel",
@@ -126,7 +135,8 @@ export const projects = [
       "https://raw.githubusercontent.com/rekomerio/LED-ESP-Websocket/master/interface.jpg",
     url: "/project/rgb-led-control",
     redirect: "https://github.com/rekomerio/LED-ESP-Websocket",
-    technologies: ["Embedded software", "C/C++", "Electronics", "JavaScript", "HTML5", "CSS3"]
+    tags: ["Embedded software", "C/C++", "Electronics", "JavaScript", "HTML5", "CSS3", "IoT"],
+    featured: false
   },
 
   {
@@ -135,6 +145,7 @@ export const projects = [
     image: "/images/vu-meter.jpg",
     url: "/project/vu-meter",
     redirect: "https://student.labranet.jamk.fi/~K9260/projects/vu_meter",
-    technologies: ["Embedded software", "C/C++", "Electronics"]
+    tags: ["Embedded software", "C/C++", "Electronics"],
+    featured: false
   }
 ];
