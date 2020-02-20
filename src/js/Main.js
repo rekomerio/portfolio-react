@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { skills, projects } from "./Content";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import Dialog from "./Dialog";
 import Collapsable from "./Collapsable";
+import Nodes from "./Nodes";
 
 const useStyles = makeStyles(theme => ({
     roundButton: {
@@ -17,28 +18,34 @@ const useStyles = makeStyles(theme => ({
         margin: 0,
         fontWeight: "inherit",
         textTransform: "none"
-    },
-    expandable: {
-        cursor: "pointer",
-        "&:hover $expandIcon": {
-            opacity: 1
-        }
-    },
-    expandIcon: {
-        opacity: 0,
-        transition: "all 0.2s"
     }
 }));
 
-function Main(props) {
+const Main = props => {
     const classes = useStyles();
     const [dialog, setDialog] = useState({ open: false, tag: "" });
+    const [headerSize, setHeaderSize] = useState({
+        width: document.body.clientWidth,
+        height: 450
+    });
 
-    function getAge() {
+    const getAge = () => {
         const bDay = new Date("1997-09-28T12:00:00");
         const today = new Date();
         return Math.floor((today - bDay) / 1000 / 60 / 60 / 24 / 365);
-    }
+    };
+
+    useEffect(() => {
+        const header = document.getElementsByTagName("header")[0];
+        setHeaderSize({ width: header.clientWidth, height: header.offsetHeight });
+
+        const onResize = () => {
+            setHeaderSize({ width: header.clientWidth, height: header.offsetHeight });
+        };
+
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
 
     return (
         <React.Fragment>
@@ -47,9 +54,18 @@ function Main(props) {
                     props.scrolled ? "dark-tint" : "light-tint"
                 }`}
             >
+                <Nodes
+                    width={headerSize.width}
+                    height={headerSize.height}
+                    style={{ position: "absolute" }}
+                    numNodes={Math.floor(document.body.clientWidth / 40)}
+                    vectorLength={200}
+                    vectorThickness={0.2}
+                    nodeSize={2}
+                />
                 <div>
                     <h2>Reko Meriö</h2>
-                    <p>Software Development student</p>
+                    <p>Software Engineering student</p>
                 </div>
             </header>
             <div id="about" className="content deep-dark left">
@@ -77,11 +93,6 @@ function Main(props) {
                         algorithms to gain a true mindset of a programmer.
                     </p>
                     <br />
-                    <p>
-                        I'm looking for a trainee position as software developer for summer of
-                        2020, so feel free to send me a message (contact information on bottom
-                        of this page)
-                    </p>
                 </div>
                 <div className="general">
                     <div className="flex-column">
@@ -162,7 +173,7 @@ function Main(props) {
             />
         </React.Fragment>
     );
-}
+};
 
 export default Main;
 

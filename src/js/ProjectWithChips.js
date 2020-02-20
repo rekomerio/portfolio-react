@@ -39,18 +39,18 @@ export default function MyChips(props) {
     return (
         <div>
             {projects.map((project, i) => (
-                <div className={classes.project}>
+                <div className={classes.project} key={i}>
                     <Link className={classes.link} to={project.url}>
                         {project.title}
                     </Link>
                     <hr />
                     <div className={classes.chips}>
-                        {project.tags.map((tag, i) => (
+                        {project.tags.map((tag, j) => (
                             <Chip
                                 onClick={() => setTag(tag)}
                                 label={tag}
                                 style={{ backgroundColor: tag === selected ? "#482880" : "" }}
-                                key={i}
+                                key={j}
                             />
                         ))}
                     </div>
